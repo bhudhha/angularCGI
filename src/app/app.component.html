@@ -1,14 +1,54 @@
-<app-header></app-header>
-<app-registration></app-registration>
-<mat-accordion>
-  <mat-expansion-panel hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title> Take a note </mat-panel-title>
-    </mat-expansion-panel-header>
-    <p>
-        <form >
+<div>
+  <div>
+    <mat-toolbar>
+      <span>Keep</span>
+    </mat-toolbar>
+  </div>
+  <div>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Take note </mat-panel-title>
+        <mat-panel-description>
+          This is a summary of the content
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-        </form>
-    </p>
-  </mat-expansion-panel>
-</mat-accordion>
+      <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+        <div>
+          <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="input" ngModel name="title" />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Text Area</mat-label>
+            <textarea
+              name="note"
+              matInput
+              placeholder="Placeholder"
+              ngModel
+            ></textarea>
+          </mat-form-field>
+        </div>
+
+        <div class="example-button-row">
+          <!-- <button (submit)="onSubmit(regForm)" mat-button color="primary">Done</button> -->
+          <button
+            mat-stroked-button
+            (submit)="onSubmit(regForm)"
+            color="primary"
+          >
+            Done
+          </button>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </div>
+  <div>
+    <mat-list role="list">
+      <mat-list-item *ngFor="let c of listNote">{{ c.title }} {{c.note}}</mat-list-item>
+    </mat-list>
+  </div>
+</div>
