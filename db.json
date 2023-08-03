@@ -1,0 +1,36 @@
+{
+  "note": [
+    {
+      "title": "Rahul",
+      "note": "Good Morning",
+      "id": 1
+    },
+    {
+      "title": "Hemant",
+      "note": "Lazy Boy",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "id": 3,
+      "username": "cdsdc",
+      "password": "sdasds"
+    },
+    {
+      "username": "vdcsd",
+      "password": "cdsdc",
+      "id": 4
+    },
+    {
+      "username": "sdccd",
+      "password": "cdscsd",
+      "id": 5
+    },
+    {
+      "username": "dcsdc",
+      "password": "csdc",
+      "id": 6
+    }
+  ]
+}

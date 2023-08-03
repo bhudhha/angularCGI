@@ -1,0 +1,60 @@
+<div style="display: flex; padding: 0.6%; margin: auto;">
+  <div style="width: 50%;">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Take note </mat-panel-title>
+        <mat-panel-description>
+          This is a summary of the content
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+        <div>
+          <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="input" ngModel name="title" />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Text Area</mat-label>
+            <textarea
+              name="note"
+              matInput
+              placeholder="Placeholder"
+              ngModel
+            ></textarea>
+          </mat-form-field>
+        </div>
+
+        <div class="example-button-row">
+          <button
+            mat-stroked-button
+            (submit)="onSubmit(regForm)"
+            color="primary"
+          >
+            Done
+          </button>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </div>
+    <div style="width: 50%; ">
+      <mat-list role="list">
+        <mat-list-item>
+          <div style="display: flex; justify-items: center; align-items: center;">
+           <div style="width: 25%;">Title</div>
+           <div style="width: 25%;"> Note</div>
+          </div>
+          </mat-list-item>
+        <mat-list-item *ngFor="let c of listNote" >
+        <div style="display: flex; justify-items: center; align-items: center;">
+         <div style="width: 25%;">{{ c.title }} </div>
+         <div style="width: 25%;"> {{ c.note }}</div>
+        </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+ 

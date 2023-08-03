@@ -1,0 +1,15 @@
+<div style="width: 50%; padding: 2%; margin: auto;">
+  <form style="display: flex; flex-direction: column;" [formGroup]="regForm"  #refNgForm="ngForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username"   required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password"   formControlName="password" required />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</div>
