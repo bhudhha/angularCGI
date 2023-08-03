@@ -6,13 +6,17 @@ import { NgForm } from '@angular/forms';
   providedIn: 'root',
 })
 export class MyRestService {
+  private apiUrl = ' http://localhost:3000/auth/v1';
   constructor(private http: HttpClient) {}
 
-  addNotes(data: NgForm) {
+  public addNotes(data: NgForm) {
     return this.http.post('http://localhost:3000/note', data);
   }
   public getNotes(): Observable<any> {
     const url = 'http://localhost:3000/note';
     return this.http.get<any>(url);
+  }
+  public logSubmit(data: any) {
+    return this.http.post('http://localhost:3000/user', data);
   }
 }
