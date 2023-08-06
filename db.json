@@ -1,36 +1,21 @@
 {
   "note": [
     {
-      "title": "Rahul",
-      "note": "Good Morning",
-      "id": 1
+      "title": "Level 1",
+      "note": "Done",
+      "id": 2
     },
     {
-      "title": "Hemant",
-      "note": "Lazy Boy",
-      "id": 2
+      "id": 3,
+      "title": "koch bhi",
+      "note": "nhi"
     }
   ],
   "user": [
     {
-      "id": 3,
-      "username": "cdsdc",
-      "password": "sdasds"
-    },
-    {
-      "username": "vdcsd",
-      "password": "cdsdc",
-      "id": 4
-    },
-    {
-      "username": "sdccd",
-      "password": "cdscsd",
-      "id": 5
-    },
-    {
-      "username": "dcsdc",
-      "password": "csdc",
-      "id": 6
+      "id": 1,
+      "username": "admin",
+      "password": "password"
     }
   ]
 }

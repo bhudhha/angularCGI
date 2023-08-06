@@ -17,7 +17,6 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { MatIconModule } from '@angular/material/icon';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +38,6 @@ import {MatTableModule} from '@angular/material/table';
     HttpClientModule,
     MatIconModule,
     ReactiveFormsModule,
-    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
